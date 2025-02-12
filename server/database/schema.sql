@@ -37,6 +37,3 @@ CREATE TABLE IF NOT EXISTS user_book (
   book_id INT NOT NULL,
   FOREIGN KEY (book_id) REFERENCES book(id)
 );
-
-
-
