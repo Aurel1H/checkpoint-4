@@ -38,6 +38,3 @@ CREATE TABLE IF NOT EXISTS user_book (
   FOREIGN KEY (book_id) REFERENCES book(id)
 );
 
-
-
-
