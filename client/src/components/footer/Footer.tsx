@@ -25,7 +25,7 @@ function Footer() {
           </a>
         </div>
         <div>
-          <h4 className={style.product}>Produit</h4>
+          <h4 className={style.product}>Plateforme</h4>
           <p>Save My Book</p>
         </div>
       </div>
