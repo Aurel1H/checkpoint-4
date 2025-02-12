@@ -1,7 +1,6 @@
 import databaseClient from "../../../database/client";
 import type { Result, Rows } from "../../../database/client";
 
-// Book = BookCard
 type Book = {
   title: string;
   summary: string;
@@ -11,10 +10,9 @@ type Book = {
   publisher: string;
   illustrator: string;
   owner: string;
-  isbn: number;
-  page_count: string;
+  isbn: string;
+  page_count: number;
   pickup_address: string;
-  // statut: string;
   cover_image: string;
 };
 
@@ -38,7 +36,7 @@ class BookRepository {
         Book.cover_image,
       ],
     );
-    return result.insertId;
+    return [result];
   }
 
   async read(BookId: number) {
