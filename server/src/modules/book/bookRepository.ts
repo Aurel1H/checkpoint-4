@@ -54,8 +54,7 @@ class BookRepository {
 
   async readAllBooks() {
     const [rows] = await databaseClient.query<Rows>(
-      `SELECT book.*
-      FROM book 
+      `SELECT * FROM book 
       `,
     );
     return rows as Book[];
