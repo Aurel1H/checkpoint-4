@@ -6,7 +6,7 @@ function ErrorPage() {
     <>
       <h1 className={style.errorTitle}>Error404</h1>
       <div className={style.gif}>
-        <img src="/ms-gif.gif" alt="GIF makeSense" />
+        <img src="/video-livre.gif" alt="GIF error-404" />
       </div>
       <p className={style.textError}>
         La page que vous recherchez n'existe pas ou est indisponible.

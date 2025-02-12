@@ -35,7 +35,7 @@
   height: 2em;
   background-color: var(--color-primary-active);
   border-radius: 1em;
-  border-color: var(--color-tertiary-active);
+  border-color: var(--color-secondary-active);
   font-size: 1em;
   margin: 0 2em 2em 0;
 }
@@ -43,7 +43,7 @@
 .buttonHomePage {
   width: 25%;
   height: 2em;
-  background-color: var(--color-tertiary-active);
+  background-color: var(--color-secondary-active);
   border-radius: 1em;
   border-color: var(--color-primary-active);
   font-size: 1em;
