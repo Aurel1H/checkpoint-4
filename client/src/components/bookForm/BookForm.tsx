@@ -1,11 +1,13 @@
 // import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import style from "./bookForm.module.css";
 
 function CreateBookForm() {
   const { register, handleSubmit, reset } = useForm<BookDetailType>();
+  const navigate = useNavigate();
 
   const onSubmit = async (data: BookDetailType) => {
     try {
@@ -24,6 +26,7 @@ function CreateBookForm() {
       if (response.ok) {
         reset();
         toast.success("Livre créé avec succès");
+        navigate("/allbookspage");
       } else {
         toast.error("Erreur lors de la création du livre");
       }
@@ -104,7 +107,6 @@ function CreateBookForm() {
               id="cover_image"
               placeholder="Sélectionner une image de couverture"
               {...register("cover_image", { required: false })}
-              // A modifier pour l'upload de l'image
             />
             <input
               className={style.input}
