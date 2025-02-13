@@ -12,7 +12,7 @@ export default function LoginForm() {
     formState: { errors },
   } = useForm<FieldValues>();
 
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const onSubmit = async (data: FieldValues) => {
     try {
       const { email, hash_password } = data;
@@ -34,13 +34,10 @@ export default function LoginForm() {
       if (response.ok) {
         reset();
         toast.success(result.message || "Connexion réussie !");
+        navigate("/allbookspage");
       } else {
         toast.error(result.message || "Erreur lors de la connexion");
       }
-
-      setTimeout(() => {
-        Navigate("/");
-      }, 1500);
     } catch (error) {
       toast.error("Erreur de connexion. Vérifiez vos identifiants.");
     }
