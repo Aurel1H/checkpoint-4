@@ -10,8 +10,9 @@ import App from "./App";
 import AllBooksPage from "./pages/allBooksPage/AllBooksPage";
 import BookDetailsPage from "./pages/bookDetailsPage/BookDetailsPage";
 import BookFormPage from "./pages/bookFormPage/BookFormPage";
-//import loginPage from "./pages/loginPage/";
 import ErrorPage from "./pages/errorPage/ErrorPage";
+import LoginPage from "./pages/loginPage/LoginPage";
+import RegisterPage from "./pages/registerPage/RegisterPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -29,16 +30,20 @@ const router = createBrowserRouter([
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
     children: [
-      // {
-      //   path: "/register",
-      //   element: <RegisterPage />,
-      // },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
+      },
       {
         path: "/allbookspage",
         element: <AllBooksPage />,
       },
       {
-        path: "/bookdetailspage/:id",
+        path: "/bookdetail/:id",
         element: <BookDetailsPage />,
       },
       {

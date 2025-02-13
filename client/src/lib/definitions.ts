@@ -1,21 +1,3 @@
-// user
-type UserType = {
-  id: number;
-  content: string;
-  firstname: string;
-  lastname: string;
-};
-
-type FormValues = {
-  firstname: string;
-  lastname: string;
-  email: string;
-  hash_password: string;
-  confirmed_password: string;
-  avatar: string;
-  country_id: number;
-};
-
 // book
 
 type BookDetailType = {
@@ -33,6 +15,24 @@ type BookDetailType = {
   cover_image: string;
   pickup_address: string;
   statut: string;
+};
+
+// user
+type UserType = {
+  id: number;
+  content: string;
+  firstname: string;
+  lastname: string;
+};
+
+type FormValues = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  hash_password: string;
+  confirmed_password: string;
+  avatar: string;
+  country_id: number;
 };
 
 // profil
