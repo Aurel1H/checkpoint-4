@@ -26,6 +26,17 @@
   gap: 0.5em;
 }
 
+.bookform {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+}
+
+.bookform .summary {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 .label {
   font-size: 1.2rem;
   display: block;
@@ -41,6 +52,7 @@
   border-radius: 8px;
   font-size: 0.9rem;
   background: white;
+  margin-bottom: 0.5em;
 }
 .textarea {
   resize: vertical;

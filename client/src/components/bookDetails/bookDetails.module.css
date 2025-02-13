@@ -22,6 +22,10 @@ figure,
   grid-column-end: 3;
 }
 
+.booking button {
+  margin-left: 1em;
+}
+
 figure {
   text-align: center;
   max-height: 15em;

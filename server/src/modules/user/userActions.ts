@@ -32,8 +32,6 @@ const add: RequestHandler = async (req, res, next) => {
       lastname: req.body.lastname,
       email: req.body.email,
       hash_password: req.body.hash_password,
-      //   avatar: req.body.avatar,
-      //   country_id: Number.parseInt(req.body.country_id),
     };
 
     const insertId = await userRepository.create(req.body);
@@ -61,8 +59,6 @@ const validateData: RequestHandler = async (req, res, next) => {
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/,
       ),
     email: Joi.string().max(155).required(),
-    // avatar: Joi.string().max(255).required(),
-    // country_id: Joi.number().required(),
   });
 
   const { error } = dataSchema.validate(req.body, { abortEarly: false });

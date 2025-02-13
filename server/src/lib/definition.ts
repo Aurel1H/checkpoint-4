@@ -7,8 +7,6 @@ type UserType = {
   avatar: string;
   created_at: number;
   updated_at: number;
-  country_id: number;
-  role_id: number;
 };
 
 type NewUserType = {
@@ -16,6 +14,4 @@ type NewUserType = {
   lastname: string;
   email: string;
   hash_password: string;
-  avatar: string;
-  country_id: string;
 };
