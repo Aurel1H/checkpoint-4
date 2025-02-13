@@ -1,11 +1,13 @@
 import { useForm } from "react-hook-form";
 import type { FieldValues } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import style from "./createUserForm.module.css";
 
 export default function CreateUserForm() {
   const minPassword: number = 8;
   const maxPassword: number = 255;
+  const navigate = useNavigate();
 
   const {
     register,
@@ -34,9 +36,15 @@ export default function CreateUserForm() {
         },
         body: JSON.stringify(transformedData),
       });
-      await response.json();
-      reset();
-      toast.success("Vous êtes enregistré");
+
+      if (response.ok) {
+        await response.json();
+        reset();
+        toast.success("Vous êtes enregistré");
+        navigate("/allbookspage");
+      } else {
+        throw new Error("Erreur lors de l'enregistrement");
+      }
     } catch (error) {
       toast.error("Erreur lors de l'envoi...");
     }
