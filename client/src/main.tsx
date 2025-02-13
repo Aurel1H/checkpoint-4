@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element: <AllBooksPage />,
       },
       {
-        path: "/bookdetailspage/:id",
+        path: "/bookdetail/:id",
         element: <BookDetailsPage />,
       },
       {
