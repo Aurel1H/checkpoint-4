@@ -26,8 +26,6 @@ export default function CreateUserForm() {
         firstname: rest.firstname.toLowerCase(),
         email: rest.email.toLowerCase(),
         hash_password: rest.hash_password,
-        avatar: rest.avatar.toLowerCase(),
-        country_id: rest.country_id,
       };
 
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user`, {
@@ -39,7 +37,7 @@ export default function CreateUserForm() {
       });
       await response.json();
       reset();
-      toast.success("Demande envoyée à l'administrateur");
+      toast.success("Vous êtes enregistré");
     } catch (error) {
       toast.error("Erreur lors de l'envoi...");
     }
@@ -56,7 +54,7 @@ export default function CreateUserForm() {
               id="lastname"
               type="text"
               aria-label="Saisissez votre nom"
-              placeholder="Pendragon"
+              placeholder="Saquet"
               className={style.input}
               {...register("lastname", {
                 required: "champ obligatoire",
@@ -75,7 +73,7 @@ export default function CreateUserForm() {
               id="firstname"
               type="text"
               aria-label="Saisissez votre prénom"
-              placeholder="Arthur"
+              placeholder="Bilbon"
               className={style.input}
               {...register("firstname", {
                 required: "champ obligatoire",
@@ -147,25 +145,14 @@ export default function CreateUserForm() {
               id="email"
               type="email"
               aria-label="Saisissez votre email"
-              placeholder="arthur@kaamelott.fr"
+              placeholder="bilbon@terredumilieu.com"
               className={style.input}
               autoComplete="current-email"
               {...register("email", { required: "champ obligatoire" })}
             />
           </label>
-          <label htmlFor="avatar" className={style.label}>
-            Photo de profil
-            <input
-              id="avatar"
-              type="text"
-              aria-label="URL de votre photo de profil"
-              placeholder="URL de votre photo de profil"
-              className={style.input}
-              {...register("avatar", { required: "champ obligatoire" })}
-            />
-          </label>
           <button type="submit" className={style.buttonCreateUser}>
-            Envoyer ma demande à l'administrateur
+            M'enregistrer
           </button>
         </section>
       </form>
