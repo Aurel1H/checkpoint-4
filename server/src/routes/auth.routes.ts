@@ -1,13 +1,13 @@
-// import express from "express";
-// import {
-//   comparePassword,
-//   hashPassword,
-// } from "../middlewares/argon2.middleware";
-// import { getUserByEmail } from "../middlewares/user.middleware";
-// import { login } from "../modules/auth/authActions";
+import express from "express";
+import {
+  comparePassword,
+  hashPassword,
+} from "../middlewares/argon2.middleware";
+import { getUserByEmail } from "../middlewares/user.middleware";
+import { login } from "../modules/authentication/authActions";
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.post("/api/auth", getUserByEmail, comparePassword, login);
+router.post("/api/auth", getUserByEmail, comparePassword, login);
 
-// export default router;
+export default router;
