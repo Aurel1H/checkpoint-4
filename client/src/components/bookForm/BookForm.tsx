@@ -36,7 +36,7 @@ function CreateBookForm() {
     <section className={style.bookContainer}>
       <h2 className={style.titleH2}>Création d'un livre</h2>
       <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
-        <section>
+        <section className={style.bookform}>
           <label htmlFor="title" className={style.label}>
             Titre du livre :
             <input
@@ -56,21 +56,25 @@ function CreateBookForm() {
               {...register("author", { required: true })}
             />
           </label>
-        </section>
-        <section>
-          <label htmlFor="summary" className={style.label}>
-            Résumé :
-            <textarea
-              className={style.textarea}
-              id="summary"
-              placeholder="Saisissez la résumé du livre ici"
-              {...register("summary", { required: true })}
-            />
-          </label>
-        </section>
-        <section>
+          <article className={style.summary}>
+            <label htmlFor="summary" className={style.label}>
+              Résumé :
+              <textarea
+                className={style.textarea}
+                id="summary"
+                placeholder="Saisissez le résumé du livre ici"
+                {...register("summary", { required: true })}
+              />
+            </label>
+          </article>
           <label htmlFor="author" className={style.label}>
             Détails de l'oeuvre
+            <input
+              className={style.input}
+              id="genre"
+              placeholder="Saisissez le genre du livre"
+              {...register("genre", { required: true })}
+            />
             <input
               className={style.input}
               id="publisher"
@@ -104,13 +108,11 @@ function CreateBookForm() {
             />
             <input
               className={style.input}
-              id="genre"
-              placeholder="Saisissez le genre du livre"
-              {...register("genre", { required: true })}
+              id="pickup_address"
+              placeholder="Saisissez la langue du livre"
+              {...register("language", { required: true })}
             />
           </label>
-        </section>
-        <section>
           <label htmlFor="author" className={style.label}>
             Détails de collecte
             <input
@@ -118,12 +120,6 @@ function CreateBookForm() {
               id="pickup_address"
               placeholder="Saisissez l'adresse où récupérer le livre"
               {...register("pickup_address", { required: true })}
-            />
-            <input
-              className={style.input}
-              id="pickup_address"
-              placeholder="Saisissez la langue du livre"
-              {...register("language", { required: true })}
             />
             <input
               className={style.input}

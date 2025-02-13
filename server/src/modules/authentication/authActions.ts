@@ -13,7 +13,7 @@ export const login: RequestHandler = async (req, res) => {
   });
 
   res.status(200).json({
-    message: `Bienvenue Save My Book ! Token : ${token}`,
+    message: "Bienvenue Save My Book !",
     token: token,
     email: user.email,
   });

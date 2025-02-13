@@ -18,7 +18,7 @@ function ErrorPage() {
           </a>
         </button>
         <button className={style.buttonHomePage} type="button">
-          <NavLink to={"/"}>Page d'accueil</NavLink>
+          <NavLink to={"/allbookspage"}>Page d'accueil</NavLink>
         </button>
       </div>
     </>

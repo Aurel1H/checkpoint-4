@@ -94,7 +94,7 @@ export default function LoginForm() {
           </label>
 
           <button type="submit" className={style.buttonLogin}>
-            Login
+            Se Connecter
           </button>
           <a href="/register" className={style.registerLink}>
             S'inscrire

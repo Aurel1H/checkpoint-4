@@ -1,4 +1,3 @@
-//import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import type { FieldValues } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -154,6 +153,9 @@ export default function CreateUserForm() {
           <button type="submit" className={style.buttonCreateUser}>
             M'enregistrer
           </button>
+          <a href="/allbookspages" className={style.loginLink}>
+            Page d'accueil
+          </a>
         </section>
       </form>
     </section>

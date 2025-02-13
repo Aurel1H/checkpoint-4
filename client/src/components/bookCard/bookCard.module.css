@@ -1,10 +1,10 @@
 .card {
   position: relative;
-  background-color: var(--color-tertiary-active);
+  background-color: var(--color-secondary-active);
   border-radius: 8px;
   padding: 1.5rem;
   transition: transform 0.2s;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
