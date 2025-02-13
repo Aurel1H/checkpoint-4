@@ -15,7 +15,7 @@ function Footer() {
     <footer>
       <div className={style.top}>
         <div>
-          <h4>Contributeurs</h4>
+          <h4>Contributeur</h4>
           <a
             href="https://www.linkedin.com/in/aur%C3%A9lien-haye-9a899841/"
             target="_blank"

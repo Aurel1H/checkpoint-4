@@ -1,0 +1,96 @@
+.card {
+  background: var(--color-secondary-active);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 6px -1px rgba(26, 26, 26, 0.1);
+  position: relative;
+}
+
+.title {
+  color: var(--color-primary-active);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.inputError {
+  border-color: #ef4444;
+}
+
+.errorText {
+  color: #ff0101;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
+  display: block;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonSignup,
+.buttonLogin {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: lowercase;
+}
+
+.buttonLogin {
+  margin-top: 1rem;
+  background-color: var(--color-primary-active);
+  color: white;
+}
+
+.registerLink {
+  color: var(--color-primary-active);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 480px;
+    padding: 3rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .input {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .buttonLogin {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
