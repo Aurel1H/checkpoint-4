@@ -11,9 +11,9 @@ const router = express.Router();
 
 // Define item-related routes
 
-router.use("/", bookroutes);
 router.use("/", AuthRoute);
 router.use("/", UserRoute);
+router.use("/", bookroutes);
 
 /* ************************************************************************* */
 
