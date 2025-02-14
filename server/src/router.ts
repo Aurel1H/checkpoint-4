@@ -1,4 +1,7 @@
 import express from "express";
+import AuthRoute from "./routes/auth.routes";
+import bookroutes from "./routes/book.routes";
+import UserRoute from "./routes/user.routes";
 
 const router = express.Router();
 
@@ -7,11 +10,10 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Define item-related routes
-import itemActions from "./modules/item/itemActions";
 
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
+router.use("/", AuthRoute);
+router.use("/", UserRoute);
+router.use("/", bookroutes);
 
 /* ************************************************************************* */
 

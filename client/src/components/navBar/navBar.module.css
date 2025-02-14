@@ -1,0 +1,36 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25em 1em;
+}
+
+.navContainer h1 {
+  color: var(--color-primary-active);
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.logoImage {
+  margin-top: 10px;
+  width: 6em;
+  height: 6em;
+}
+
+.profileImage {
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .navContainer h1 {
+    font-size: 2em;
+  }
+  .logoImage,
+  .profileImage {
+    width: 3em;
+    height: 3em;
+  }
+}

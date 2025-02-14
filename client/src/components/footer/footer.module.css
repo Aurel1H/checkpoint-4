@@ -1,0 +1,35 @@
+/* Footer global */
+footer {
+  background-color: black;
+  color: white;
+  height: auto;
+  padding: 1em;
+}
+
+/* Partie supérieure du footer */
+footer .top,
+footer .bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.socialLinks {
+  margin: auto;
+}
+
+.socialLinks a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin: 1em;
+}
+
+.socialLinks a:hover {
+  color: var(--main-color);
+}
