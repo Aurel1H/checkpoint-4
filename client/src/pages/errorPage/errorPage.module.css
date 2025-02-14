@@ -1,10 +1,3 @@
-*:focus-visible {
-  outline-style: dashed;
-  outline-color: var(--outline-color);
-  outline-width: 3px;
-  outline-offset: 4px;
-}
-
 .errorTitle {
   text-align: center;
   font-size: 5em;
