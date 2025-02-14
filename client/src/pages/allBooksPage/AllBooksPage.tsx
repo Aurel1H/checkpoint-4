@@ -30,10 +30,10 @@ export default function AllBooksPage() {
               <BookCard book={book} />
             </div>
           ))}
-          <a href="#tous_les_livres" className={style.buttonScrollToTop}>
-            Revenir en haut
-          </a>
         </div>
+        <a href="#tous_les_livres" className={style.buttonScrollToTop}>
+          Revenir en haut
+        </a>
       </section>
     </main>
   );

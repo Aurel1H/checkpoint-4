@@ -34,6 +34,7 @@ figure {
 
 figure img {
   height: 100%;
+  max-width: 100%;
 }
 
 .title h1 {
@@ -76,6 +77,9 @@ figure img {
 
 .container .booking {
   text-align: right;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .booking button {
@@ -85,6 +89,7 @@ figure img {
   color: white;
   border-color: var(--color-primary-active);
   font-size: 1em;
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {
