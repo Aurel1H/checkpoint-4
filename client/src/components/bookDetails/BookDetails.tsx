@@ -81,6 +81,7 @@ export default function BookDetail({ id }: { id: string }) {
         <article>
           <h2 className={style.titleH2}>Addresse où récupérer le livre</h2>
           <p>{book.pickup_address}</p>
+          <p>{book.owner}</p>
         </article>
         <article className={style.booking}>
           <button type="button" onClick={() => deleteBook()}>
